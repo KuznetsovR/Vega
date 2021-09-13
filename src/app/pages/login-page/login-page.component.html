@@ -1,1 +1,33 @@
-<p>login-page works!</p>
+<div class="login-page">
+	<div class="login-card">
+		<form class="login-form" (ngSubmit)="submitForm()" [formGroup]="loginForm">
+			<h2 class="login-header">Login</h2>
+			<div class="form__group field">
+				<input
+					type="text"
+					class="form__field"
+					placeholder="Login"
+					name="login"
+					id="login-input"
+					required
+					formControlName="login"
+				/>
+				<label for="login-input" class="form__label">Login</label>
+			</div>
+			<div class="form__group field">
+				<input
+					type="password"
+					class="form__field"
+					placeholder="Password"
+					name="password"
+					id="password-input"
+					formControlName="password"
+					required
+				/>
+				<label for="password-input" class="form__label">Password</label>
+			</div>
+			<div class="incorrect-data" *ngIf="wrongPasswordOrEmail">Password or login is incorrect!</div>
+			<button type="submit" class="submit-btn">SUBMIT</button>
+		</form>
+	</div>
+</div>

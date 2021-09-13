@@ -1,0 +1,96 @@
+@import 'src/styles/colors';
+.login-page {
+	width: 100vw;
+	height: 100vh;
+	background: #302f2d;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.login-card {
+	width: 500px;
+	height: 300px;
+	background: #fff;
+	text-align: center;
+	border-radius: 5px;
+}
+.login-form {
+	flex-direction: column;
+	display: flex;
+	height: 100%;
+	width: 70%;
+	margin: auto;
+}
+
+.submit-btn {
+	width: 30%;
+  color: white;
+  border-radius: 5px;
+	margin: 20px auto 0 auto;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: $primary;
+  border: 0;
+}
+.label {
+	text-align: start;
+	margin-top: 20px;
+}
+.input {
+	padding: 3px;
+}
+.incorrect-data {
+	color: red;
+  margin-top: 5px;
+}
+
+.form__group {
+	position: relative;
+	padding: 15px 0 0;
+	margin-top: 10px;
+}
+
+.form__field {
+	font-family: inherit;
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid $gray;
+	outline: 0;
+	font-size: 1.3rem;
+	padding: 7px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+	color: black;
+	&::placeholder {
+		color: transparent;
+	}
+
+	&:placeholder-shown ~ .form__label {
+		font-size: 1.3rem;
+		cursor: text;
+		top: 20px;
+	}
+}
+
+.form__label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 1rem;
+	color: $gray;
+}
+
+.form__field:focus {
+	~ .form__label {
+		position: absolute;
+		top: 0;
+		display: block;
+		transition: 0.2s;
+		font-size: 1rem;
+		color: $primary;
+	}
+	padding-bottom: 6px;
+	border-width: 3px;
+	border-image: linear-gradient(to right, $primary, $secondary) 1;
+}
