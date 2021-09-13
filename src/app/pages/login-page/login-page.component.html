@@ -11,6 +11,7 @@
 					id="login-input"
 					required
 					formControlName="login"
+          (input)="changeLogin($event)"
 				/>
 				<label for="login-input" class="form__label">Login</label>
 			</div>
@@ -22,7 +23,8 @@
 					name="password"
 					id="password-input"
 					formControlName="password"
-					required
+          (input)="changePassword($event)"
+          required
 				/>
 				<label for="password-input" class="form__label">Password</label>
 			</div>
