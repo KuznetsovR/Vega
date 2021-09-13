@@ -1,0 +1,15 @@
+@import "src/styles/colors";
+.select-destination-page{
+  width: 100vw;
+  height: 100vh;
+  background: $dark-gray;
+}
+.destination-button{
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: $primary;
+  border: 0;
+}
