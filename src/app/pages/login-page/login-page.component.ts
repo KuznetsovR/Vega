@@ -7,8 +7,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 	styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
-	login: string = '';
-	password: string = '';
 	loginControl = new FormControl('', [Validators.required]);
 	passwordControl = new FormControl('', [Validators.required]);
 	loginForm = new FormGroup({
@@ -20,14 +18,8 @@ export class LoginPageComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit(): void {}
-  changeLogin(event: Event){
-	  this.login = (event.target as HTMLInputElement).value
-  }
-  changePassword(event: Event){
-	  this.password = (event.target as HTMLInputElement).value
-  }
 	submitForm() {
 		this.wrongPasswordOrEmail = true;
-    console.log(this.login, this.password, 'The form was submitted')
+    console.log('The form was submitted', this.loginControl.value, this.passwordControl.value)
 	}
 }
